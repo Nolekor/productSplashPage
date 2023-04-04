@@ -1,6 +1,7 @@
 body {
-    font-family: 'Source Sans Pro', sans-serif;
-    color: #404040;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #404040;
+  margin: 0;
 }
 
 /* =================
@@ -8,37 +9,95 @@ body {
    ================= */
 
 h1 {
-    font-weight: 400;
+  font-weight: 400;
+  font-size: 2.5rem;
+  text-shadow: #816fca 0px 2px;
+}
+h2 {
+  font-size: 2.25;
+  margin: 0.167 0;
+}
+p {
+  font-size: 1.125rem;
+  line-height: 1.35;
 }
 
-.beta-text { 
-    font-weight: 900;
+.beta-text {
+  font-weight: 900;
 }
 
 .subheading {
-    color: #575757;
-    font-weight: 900;
+  color: #575757;
+  font-weight: 900;
+  margin-bottom: 0.5em;
+}
+.subheading,
+.beta-text {
+  text-transform: uppercase;
+}
+/* =================
+    display flex content
+   ================= */
+.intro,
+.main-content {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5em 2em 0 2em;
 }
 
 /* =================
     Intro
    ================= */
-   
-.intro { 
-    color: #fff;
-    background-color: #9480e4;
+
+.intro {
+  color: #fff;
+  min-height: 250px;
+  justify-content: center;
+  text-align: center;
+  background: #9480e4 url(/images/intro-bg.png);
+  background-size: cover;
 }
 
 /* ====================
     Main content
    ==================== */
-
+.main-content {
+  align-items: center;
+}
+.img-main {
+  width: 120px;
+  border-radius: 50%;
+}
 
 /* =================
     Form
    ================= */
-   
 
 /* =================
     Media queries 
    ================= */
+@media (min-width: 576px) {
+  body {
+    display: flex;
+  }
+  h1 {
+    font-size: 5vw;
+  }
+  h2 {
+    font-size: 2.625rem;
+  }
+  .beta-text {
+    font-size: 1.25rem;
+  }
+  .intro {
+    min-height: 100vh;
+  }
+  .intro,
+  .main-content {
+    width: 50%;
+  }
+  .main-content {
+    justify-content: center;
+    padding-top: 0;
+  }
+}
